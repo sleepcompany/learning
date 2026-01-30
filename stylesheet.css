@@ -1,0 +1,159 @@
+/* Typography */
+
+h1 {
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: var(--Primary, #1A1918);
+    font-size: 76px;
+    font-style: normal;
+    line-height: 60px;
+    /* 80.435% */
+    text-transform: uppercase;
+    padding: 32px 0 4px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text {
+    margin: 0px;
+    padding: 4px 0px 20px;
+}
+
+.dm-mono-regular {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-mono-medium {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+a .primary-button {
+    text-decoration: none;
+}
+
+.primary-button {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    background-color: #1A1918;
+    color: #ffffff;
+    border: none;
+    /* top and bottom | left and right */
+    padding: 8px 24px;
+    display: flex;
+    height: 46px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 1s;
+}
+
+.primary-button:hover {
+    background-color: #533EA3;
+    cursor: pointer;
+}
+
+.secondary-button {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    display: flex;
+    height: 46px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #EEE;
+    background-color: #fff;
+    transition: 1s;
+}
+
+.secondary-button:hover {
+    background-color: #B2A7FF;
+}
+
+.pill-1 {
+    font-family: "DM Mono", monospace;
+    border-radius: 40px;
+    background: #EDE8FF;
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    text-transform: uppercase;
+
+}
+
+.pill-2 {
+    font-family: "DM Mono", monospace;
+    /* border-radius: 40px; */
+    background: #F9F5EF;
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    text-transform: uppercase;
+
+}
+
+.button-bar {
+    display: flex;
+    align-items: left;
+    gap: 0 12px;
+
+}
+
+.pill-bar {
+    display: flex;
+    align-items: left;
+    gap: 0 0px;
+
+}
+
+/* Layout */
+.container {
+    display: flex;
+    /* Makes the container a flex container */
+    gap: 20px;
+    /* Adds space between columns */
+    flex-wrap: wrap;
+    /* Allows columns to stack on smaller screens */
+}
+
+.column {
+    flex: 1;
+    /* Makes columns take up equal available space */
+    /* Or for fixed widths: flex-basis: 50%; */
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    /* Includes padding and border in the element's total width */
+}
+
+/* Responsive adjustment for smaller screens (e.g., mobile) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        /* Stacks columns vertically */
+    }
+
+    .column {
+        width: 100%;
+        /* Ensures columns take full width when stacked */
+    }
+}
