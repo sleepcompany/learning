@@ -127,22 +127,30 @@ a .primary-button {
 
 /* Layout */
 .container {
-    display: flex;
     /* Makes the container a flex container */
     gap: 20px;
     /* Adds space between columns */
-    flex-wrap: wrap;
     /* Allows columns to stack on smaller screens */
 }
 
 .column {
     flex: 1;
-    /* Makes columns take up equal available space */
-    /* Or for fixed widths: flex-basis: 50%; */
+    display: flex;
     padding: 20px;
-    background-color: #f0f0f0;
     box-sizing: border-box;
-    /* Includes padding and border in the element's total width */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item {
+flex: 1;
+}
+
+.hero-image {
+    width: 100%;
 }
 
 /* Responsive adjustment for smaller screens (e.g., mobile) */
@@ -153,7 +161,7 @@ a .primary-button {
     }
 
     .column {
-        width: 100%;
+        width: auto;
         /* Ensures columns take full width when stacked */
     }
 }
