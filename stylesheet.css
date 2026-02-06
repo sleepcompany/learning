@@ -1,5 +1,10 @@
 /* Typography */
 
+a {
+  color: #533EA3;
+  text-decoration: none; /* no underline */
+}
+
 h1 {
     font-family: "Sofia Sans Extra Condensed", sans-serif;
     font-optical-sizing: auto;
