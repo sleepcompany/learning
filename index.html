@@ -15,6 +15,49 @@
 </header>
 
 <body>
+    <nav class="nav">
+        <div class="nav__inner">
+
+            <!-- Logo -->
+            <a href="/" class="nav__logo" aria-label="Home">
+                <!-- Paste your SVG inline here -->
+                <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#000" />
+                    <text x="40" y="22" font-family="sans-serif" font-size="14" font-weight="700"
+                        fill="#000">Logo</text>
+                </svg>
+            </a>
+
+            <!-- Menu + CTA -->
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="/posters">Posters</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/book" class="nav__cta">Book me</a></li>
+            </ul>
+
+            <!-- Hamburger -->
+            <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            const open = menu.classList.toggle('is-open');
+            toggle.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+
+    <!-- Content -->
     <div class="container">
         <div class="column">
             <div class="item">

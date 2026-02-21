@@ -1,5 +1,148 @@
 /* Typography */
 
+/* Navigation new */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.nav {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* --- Max-width inner container --- */
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+}
+
+/* --- Logo --- */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__logo svg {
+  width: auto;
+  height: 32px;
+}
+
+/* --- Menu --- */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav__menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav__menu a:hover {
+  color: #000;
+}
+
+/* --- CTA Button --- */
+.nav__cta {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: #000;
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nav__cta:hover {
+  background: #333;
+}
+
+/* --- Hamburger --- */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__hamburger span {
+  display: block;
+  height: 2px;
+  background: #000;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.nav__hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__hamburger.is-open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 2rem 1.5rem;
+    z-index: 100;
+  }
+
+  .nav__menu.is-open {
+    display: flex;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav__menu li:last-child {
+    border-bottom: none;
+    padding-top: 1rem;
+  }
+
+  .nav__cta {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+/* Body */
+
 a {
   color: #533EA3;
   text-decoration: none; /* no underline */
